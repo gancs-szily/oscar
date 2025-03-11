@@ -11,9 +11,12 @@ if(isset($_GET['view'])){
             
         case 'single':
             $Oscarrest= new OscarRestKezelo();
-            $Oscarrest->;
+            $Oscarrest->getOscarsByID($_GET['id']);
             break;
 
+        case 'tipus':
+            $Oscarrest= new OscarRestKezelo();
+            $Oscarrest->getOscarsByID($_GET['tid']);
         default:
             # code...
             break;
