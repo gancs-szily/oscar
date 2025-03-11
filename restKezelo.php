@@ -4,7 +4,7 @@ class RestKezelo{
     public function setHttpFejlec($statuskod){
         $statusUzenet=$this->gethttpStatusUzenet($statuskod);
         header($this->httpVersion." ". $statuskod. " ".$statusUzenet);
-        header("Content-Type: Application/json; charset=utf-8");
+        header("Content-Type: application/json; charset=utf-8");
     }
 
     public function gethttpStatusUzenet($statuskod){

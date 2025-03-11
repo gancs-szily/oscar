@@ -13,7 +13,6 @@ class OscarRestKezelo extends RestKezelo{
         }else {
             $statusCode=200;
         }
-
         $this->sethttpFejlec($statusCode);
         header('Content-Type: application/json; charset=utf-8');
         $result['Oscars']=$sorAdat;
@@ -33,7 +32,6 @@ class OscarRestKezelo extends RestKezelo{
         }else {
             $statusCode=200;
         }
-
         $this->sethttpFejlec($statusCode);
         header('Content-Type: application/json; charset=utf-8');
         $result['OscarsById']=$sorAdat;
@@ -53,7 +51,6 @@ class OscarRestKezelo extends RestKezelo{
         }else {
             $statusCode=200;
         }
-
         $this->sethttpFejlec($statusCode);
         header('Content-Type: application/json; charset=utf-8');
         $result['OscarsByType']=$sorAdat;
@@ -66,7 +63,7 @@ class OscarRestKezelo extends RestKezelo{
     function getFault(){
         $statusCode=400;
         $this->sethttpFejlec($statusCode);
-        header('Content-Type: application/jon; charset=UTF-8');
+        header('Content-Type: application/json; charset=utf-8');
         $sorAdat=array('error'=>'Bad request');
         $result['Fault']=$sorAdat;
 

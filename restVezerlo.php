@@ -16,9 +16,10 @@ if(isset($_GET['view'])){
 
         case 'tipus':
             $Oscarrest= new OscarRestKezelo();
-            $Oscarrest->getOscarsByID($_GET['tid']);
+            $Oscarrest->getOscarsByType($_GET['tid']);
         default:
-            # code...
+            $Oscarrest= new OscarRestKezelo();
+            $Oscarrest->getFault();
             break;
     }
 }
